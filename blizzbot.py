@@ -270,7 +270,8 @@ async def on_message_delete(message):
     if(message):
 
         channel = discord.utils.get(message.guild.text_channels, id=IDchannellogs)
-
+        
+        if channel is not 
         embed = discord.Embed(title="Gelöschte Nachricht", color=0xedbc5d)
         if(message.author.avatar_url):
             embed.set_thumbnail(url=message.author.avatar_url)
@@ -287,7 +288,8 @@ async def on_message_delete(message):
         else:
             embed.add_field(name="Inhalt", value="Inhalt nicht auslesbar", inline=False)
 
-        await channel.send(embed=embed)
+        if message.content is not "!zz":
+            await channel.send(embed=embed)
 
     return
 
